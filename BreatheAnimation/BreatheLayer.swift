@@ -59,6 +59,7 @@ class BreatheLayer: CALayer {
     
     private var radiusFactor: CGFloat = 1.6
     
+    var rotationAnimationD: Double = 4.0
     
     //MARK: Methods
     
@@ -106,7 +107,7 @@ class BreatheLayer: CALayer {
         let rotationAnimation = CABasicAnimation(keyPath: "transform.rotation")
         rotationAnimation.fromValue = 0.0
         rotationAnimation.toValue = Float.pi * 2.0
-        rotationAnimation.duration = 4.0
+        rotationAnimation.duration = rotationAnimationD
         rotationAnimation.repeatCount = 2.0
         replicatorLayer.add(rotationAnimation, forKey: "rotationAnimation")
         
